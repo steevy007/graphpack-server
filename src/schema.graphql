@@ -1,0 +1,18 @@
+type Query{
+    personnes:[Personne]
+    personne(id:ID!):Personne
+}
+
+type Mutation{
+    addPersonne(nom:String,prenom:String,age:Int,sexe:String):Personne
+    editPersonne(id:ID!,nom:String,prenom:String,age:Int,sexe:String):Personne
+    deletePersonne(id:ID!):Boolean
+}
+
+type Personne{
+    id:ID!
+    nom:String
+    prenom:String
+    age:Int
+    sexe:String
+}
